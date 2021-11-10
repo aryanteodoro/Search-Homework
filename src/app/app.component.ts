@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
+import { StudentsService } from './students.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,20 +10,13 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Search';
 
-  Students: any; 
-  searchValue: any;
 
-  constructor(private httpClient: HttpClient, public router: Router) {
+  constructor() {
   
    }
   ngOnInit() {
-    this.httpClient.get('/assets/Students.json').subscribe(result => {
-      this.Students = result;
-    
-    });
-
-    
-
+   
+  
   }
 
 }

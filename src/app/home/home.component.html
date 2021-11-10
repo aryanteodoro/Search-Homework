@@ -1,0 +1,10 @@
+
+<table>
+  <tbody>
+      <tr *ngFor="let student of Students | searchfilter:searchValue">
+          <td scope="col">{{student.Name}}</td>
+      </tr>
+  </tbody>
+  </table>
+
+

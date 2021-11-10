@@ -9,21 +9,33 @@ import {HttpClientModule} from '@angular/common/http';
 import {StudentdetailsComponent} from './studentdetails/studentdetails.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
 
-//import {MatTabsModule} from '@angular/material/tabs';
+import {StudentsService} from './students.service';
+import { HomeComponent } from './home/home.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
     StudentdetailsComponent,
     SearchfilterPipe,
+    HomeComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatButtonModule
+ 
   ],
-  providers: [],
+  providers: [
+    StudentsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

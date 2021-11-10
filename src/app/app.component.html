@@ -1,19 +1,4 @@
+<app-nav-bar></app-nav-bar>
 
-<div>
-      <!--<a href="#" >Home</a>
-        <ul routerLink=search >Search</ul>-->
-    
-</div>
-<label>Search: </label>
-<input type="text" [(ngModel)]="searchValue" class="form-control" id="search"/>
-<table>
-    <tbody>
-        <tr *ngFor="let student of Students | searchfilter:searchValue">
-            <td scope="col">{{student.Name}}</td>
-        </tr>
-    </tbody>
-    </table>
-   
-        <app-studentdetails [data]="searchValue"></app-studentdetails>
-   
+
             

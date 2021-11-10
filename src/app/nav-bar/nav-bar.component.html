@@ -1,0 +1,17 @@
+<mat-toolbar class="mat-elevation-z1">
+
+<a mat-button routerLink="home">Home</a>
+<a mat-button routerLink='search'>Search</a>
+<div class="space"></div>
+<label >Search:  </label>
+<input type="text" [(ngModel)]="input" class="form-control"/>
+
+</mat-toolbar>
+
+<ng-container *ngIf="this.router.url == '/home'">
+    <app-home [searchValue]="input"></app-home>
+</ng-container>
+
+<ng-container *ngIf="this.router.url == '/search'">
+    <app-studentdetails [data]="input"></app-studentdetails>
+</ng-container>
